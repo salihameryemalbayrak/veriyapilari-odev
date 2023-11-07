@@ -25,20 +25,14 @@ public class _22010310010_main {
 			
 		System.out.println("Varış süresi hesaplanacak olan kişinin ismini giriniz:");
 		String kisi= input.next();
-		getKisi(kisiler,kisi).toplamYol();                      //bunlari sillllllllllll ama hesap yapsın
-		getKisi(kisiler,kisi).varisSuresi();
 		System.out.println(kisi+" "+ getKisi(kisiler,kisi).sonDurak().isim+" varış süresi "+getKisi(kisiler,kisi).varisSuresi+" dk");
 				
 		System.out.println("Toplam yol uzunluğu hesaplanacak olan kişinin ismini giriniz:");
 		kisi= input.next();
-		getKisi(kisiler,kisi).toplamYol();                      //bunlari sillllllllllll ama hesap yapsın
-		getKisi(kisiler,kisi).varisSuresi();
 		System.out.println(kisi+" "+ getKisi(kisiler,kisi).sonDurak().isim+" toplam yol uzunluğu "+getKisi(kisiler,kisi).toplamyol+" km");
 		
 		System.out.println("Kimin hangi saat itibariyle hangi noktada olduğunu hesaplamak için, aralarında bir boşluk bırakarak kişi ismini ve saati giriniz:");
 		kisi= input.next();
-		getKisi(kisiler,kisi).toplamYol();                      //bunlari sillllllllllll ama hesap yapsın
-		getKisi(kisiler,kisi).varisSuresi();
 		String saat= input.next();
 		System.out.println(kisi+" "+saat+" itibariyle");
 		getKisi(kisiler,kisi).bulunduguKonum(saat);       
@@ -107,6 +101,8 @@ public class _22010310010_main {
 			_22010310010_kisi biri =new _22010310010_kisi(input.next());
 			scanRota(input.next(),biri,sehirler);
 			biri.hiz=input.nextDouble();
+			biri.toplamYol();                     
+		        biri.varisSuresi();
 			kisiler.add(biri);
 			input.next();
 		}
